@@ -1,4 +1,4 @@
-export const navLinks = [
+const navLinks = [
     { label: "Store" },
     { label: "Mac" },
     { label: "iPhone" },
@@ -7,7 +7,7 @@ export const navLinks = [
     { label: "AirPods" },
 ];
 
-export const noChangeParts = [
+const noChangeParts = [
     "Object_84",
     "Object_37",
     "Object_34",
@@ -24,10 +24,9 @@ export const noChangeParts = [
     "Object_52",
     "Object_21",
     "Object_10",
-    "Object_123",
 ];
 
-export const performanceImages = [
+const performanceImages = [
     { id: "p1", src: "/performance1.png" },
     { id: "p2", src: "/performance2.png" },
     { id: "p3", src: "/performance3.png" },
@@ -37,7 +36,7 @@ export const performanceImages = [
     { id: "p7", src: "/performance7.png" },
 ];
 
-export const performanceImgPositions = [
+const performanceImgPositions = [
     {
         id: "p1",
         left: 5,
@@ -75,7 +74,7 @@ export const performanceImgPositions = [
     },
 ];
 
-export const features = [
+const features = [
     {
         id: 1,
         icon: "/feature-icon1.svg",
@@ -113,7 +112,7 @@ export const features = [
     },
 ];
 
-export const featureSequence = [
+const featureSequence = [
     { videoPath: "/videos/feature-1.mp4", boxClass: ".box1", delay: 1 },
     { videoPath: "/videos/feature-2.mp4", boxClass: ".box2", delay: 0 },
     { videoPath: "/videos/feature-3.mp4", boxClass: ".box3", delay: 0 },
@@ -121,10 +120,20 @@ export const featureSequence = [
     { videoPath: "/videos/feature-5.mp4", boxClass: ".box5", delay: 0 },
 ];
 
-export const footerLinks = [
+const footerLinks = [
     { label: "Privacy Policy", link: "#" },
     { label: "Terms of Use", link: "#" },
     { label: "Sales Policy", link: "#" },
     { label: "Legal", link: "#" },
     { label: "Site Map", link: "#" },
 ];
+
+export {
+    features,
+    featureSequence,
+    footerLinks,
+    navLinks,
+    noChangeParts,
+    performanceImages,
+    performanceImgPositions,
+};

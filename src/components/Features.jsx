@@ -1,18 +1,18 @@
-import { Canvas } from "@react-three/fiber";
-import { features, featureSequence } from "../constants/index.js";
+import {Canvas} from "@react-three/fiber";
+import StudioLights from "./three/StudioLights.jsx";
+import {features, featureSequence} from "../constants/index.js";
 import clsx from "clsx";
-import { Suspense, useEffect, useRef } from "react";
-import { Html } from "@react-three/drei";
-import MacbookModel from "../models/Macbook.jsx";
-import { useMediaQuery } from "react-responsive";
+import {Suspense, useEffect, useRef} from "react";
+import {Html} from "@react-three/drei";
+import MacbookModel from "./models/Macbook.jsx";
+import {useMediaQuery} from "react-responsive";
 import useMacbookStore from "../store/index.js";
-import { useGSAP } from "@gsap/react";
+import {useGSAP} from "@gsap/react";
 import gsap from 'gsap';
-import StudioLights from "../three/StudioLights.jsx";
 
 const ModelScroll = () => {
     const groupRef = useRef(null);
-    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)'})
     const { setTexture } = useMacbookStore();
 
     // Pre-load all feature videos during component mount
@@ -55,8 +55,8 @@ const ModelScroll = () => {
         })
 
         // 3D SPIN
-        if (groupRef.current) {
-            modelTimeline.to(groupRef.current.rotation, { y: Math.PI * 2, ease: 'power1.inOut' })
+        if(groupRef.current) {
+            modelTimeline.to(groupRef.current.rotation, { y: Math.PI * 2, ease: 'power1.inOut'})
         }
 
         // Content & Texture Sync
@@ -71,7 +71,7 @@ const ModelScroll = () => {
             .to('.box3', { opacity: 1, y: 0 })
 
             .call(() => setTexture('/videos/feature-4.mp4'))
-            .to('.box4', { opacity: 1, y: 0 })
+            .to('.box4', { opacity: 1, y: 0})
 
             .call(() => setTexture('/videos/feature-5.mp4'))
             .to('.box5', { opacity: 1, y: 0 })
